@@ -83,21 +83,58 @@ body {
 
 .btn:link,
 .btn:visited {
+  position: relative;
   text-transform: uppercase;
   text-decoration: none;
   padding: 15px 40px;
   display: inline-block;
-  transition: all 0.2s ;
+  transition: all 0.2s;
   border-radius: 100px;
 }
 
 .btn:hover {
   transform: translateY(-3px);
+  box-shadow: 0 10px 20px 10px #242424;
 }
 .btn:active {
   transform: translateY(-1px);
+  box-shadow: 0 5px 10px 5px #242424;
 }
 .btn-white {
   background-color: #f7f7f7;
   color: #242424;
+}
+.btn::after {
+  position: absolute;
+  content: " ";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  top: 0%;
+  left: 0%;
+  z-index: -1;
+  transition: all 0.4s;
+}
+.btn-white::after {
+  background-color: #f7f7f7;
+}
+.btn:hover::after {
+  transform: scale(1.2);
+  opacity: 0;
+}
+
+@keyframes moveUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animated {
+  animation: moveUp 1s ease-in-out backwards;
 }
