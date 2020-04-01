@@ -13,13 +13,91 @@ body {
 }
 
 .header {
-  height: 95vh;
-  background-image: linear-gradient(to right, #7ed56fc2, #55c57aa8, #28b485b2),
-    url(../img/hero.jpg);
+  position: relative;
+  height: 100vh;
+  background-image: url(../img/832209.jpg);
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0%, 100% 75%, 0% 100%);
 }
 
 .logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+.logo {
+  height: 35px;
+}
+
+.text-box {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transition: all 0.2s;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.heading-primary-main {
+  color: #f7f7f7;
+  text-transform: uppercase;
+  display: block;
+  font-size: 80px;
+  font-weight: 800;
+  letter-spacing: 50px;
+  animation: moveInLeft 0.5s ease-in-out;
+}
+.heading-primary-sub {
+  color: #f7f7f7;
+  text-transform: uppercase;
+  display: block;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 10px;
+  animation: moveInRight 0.5s ease-in-out;
+  margin-bottom: 60px;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  transition: all 0.2s ;
+  border-radius: 100px;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+.btn:active {
+  transform: translateY(-1px);
+}
+.btn-white {
+  background-color: #f7f7f7;
+  color: #242424;
 }
