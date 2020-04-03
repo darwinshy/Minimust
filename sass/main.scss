@@ -1,155 +1,18 @@
 // Importing Partials
+
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variable";
 @import "base/base";
+@import "base/animation";
+@import "layouts/header";
+@import "layouts/grid";
+@import "pages/home";
+@import "base/typography";
+@import "components/button";
+@import "components/composition";
+@import "base/utilities";
 
-// Variables
-$dirtblack: #1f1f1f;
-$dirtwhite: #f7f7f7;
-$lightblack: #242424;
+// This styling is written in BEM and 7 to 1 Architecture.
 
-*,
-*::after,
-*::before {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: inherit;
-}
-html {
-  font-size: 62.5%;
-}
-
-body {
-  font-family: "Century Gothic";
-  font-weight: 400;
-  /* font-size: 16px; */
-  line-height: 1.6;
-  color: $dirtblack;
-  box-sizing: border-box;
-}
-.header {
-  position: relative;
-  height: 100vh;
-  background-image: url(../img/832209.jpg);
-  background-size: cover;
-  background-position: top;
-  clip-path: polygon(0 0, 100% 0%, 100% 75%, 0% 100%);
-
-  &__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem;
-  }
-  &__logo {
-    height: 3.5rem;
-  }
-  &__text-box {
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transition: all 0.2s;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-}
-
-.heading-primary {
-  text-transform: uppercase;
-  display: block;
-  color: $dirtwhite;
-
-  &--main {
-    font-size: 8rem;
-    font-weight: 8rem;
-    letter-spacing: 5rem;
-    animation: moveInLeft 0.5s ease-in-out;
-  }
-  &--sub {
-    font-size: 2rem;
-    font-weight: 500;
-    letter-spacing: 1rem;
-    animation: moveInRight 0.5s ease-in-out;
-    margin-bottom: 60px;
-  }
-}
-
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.btn:link,
-.btn:visited {
-  position: relative;
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 1.5rem 4rem;
-  display: inline-block;
-  transition: all 0.2s;
-  border-radius: 10rem;
-  font-size: 1.6rem;
-
-  &--animated {
-    animation: moveUp 1s ease-in-out backwards;
-  }
-
-  &:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px 10px $dirtwhite;
-  }
-
-  &:active {
-    transform: translateY(-1px);
-    box-shadow: 0 5px 10px 5px $lightblack;
-  }
-  &::after {
-    position: absolute;
-    content: " ";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 10rem;
-    top: 0%;
-    left: 0%;
-    z-index: -1;
-    transition: all 0.4s;
-  }
-}
-
-.btn--white {
-  background-color: $dirtwhite;
-  color: $dirtblack;
-  &::after {
-    background-color: $dirtwhite;
-  }
-}
-.btn:hover::after {
-  transform: scale(1.2);
-  opacity: 0;
-}
-
-@keyframes moveUp {
-  0% {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+// Coded by Shashwat Priyadarshy
