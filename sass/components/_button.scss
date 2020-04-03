@@ -59,7 +59,7 @@
     font-weight: 600;
     font-family: "Century Gothic";
     padding: 0.8rem 0.5rem;
-    transition: all 0.2s;
+    transition: all 0.2s ease;
   }
   &:hover {
     color: $dirtwhite;

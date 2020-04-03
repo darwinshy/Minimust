@@ -96,7 +96,7 @@ body {
 
 .header {
   position: relative;
-  height: 95vh;
+  height: 100vh;
   background-image: url(../img/832209.jpg);
   background-size: cover;
   background-position: top;
@@ -175,7 +175,19 @@ body {
 .section-about {
   background-color: #f7f7f7;
   padding: 40rem 0;
-  margin-top: -25vh;
+  margin-top: -35vh;
+}
+
+.section-features {
+  background-color: #f7f7f7;
+  padding: 40rem 0;
+  margin-top: -35vh;
+  height: 150vh;
+  background-image: url(../img/ZjUaXAt.png);
+  background-size: cover;
+  background-position: top;
+  -webkit-clip-path: polygon(0 25%, 100% 0%, 100% 75%, 0% 100%);
+          clip-path: polygon(0 25%, 100% 0%, 100% 75%, 0% 100%);
 }
 
 body {
@@ -235,6 +247,31 @@ body {
 
 .paragraph:not(:last-child) {
   margin-bottom: 4rem;
+}
+
+.feature-box {
+  background-color: #f7f7f7;
+  color: #1f1f1f;
+  font-size: 1.5rem;
+  padding: 4rem;
+  text-align: center;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(247, 247, 247, 0.2);
+          box-shadow: 0 1.5rem 4rem rgba(247, 247, 247, 0.2);
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+.feature-box--icon {
+  font-size: 6rem;
+  margin-bottom: 0.5rem;
+}
+
+.feature-box:hover {
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
 }
 
 .btn:link,
@@ -311,8 +348,8 @@ body {
   font-weight: 600;
   font-family: "Century Gothic";
   padding: 0.8rem 0.5rem;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .btn-text:hover {

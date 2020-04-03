@@ -1,5 +1,16 @@
 .section-about {
   background-color: $dirtwhite;
   padding: 40rem 0;
-  margin-top: -25vh;
+  margin-top: -35vh;
+}
+
+.section-features {
+  background-color: $dirtwhite;
+  padding: 40rem 0;
+  margin-top: -35vh;
+  height: 150vh;
+  background-image: url(../img/ZjUaXAt.png);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 25%, 100% 0%, 100% 75%, 0% 100%);
 }

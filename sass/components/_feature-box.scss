@@ -1,0 +1,21 @@
+.feature-box {
+  background-color: $dirtwhite;
+  color: $dirtblack;
+  font-size: 1.5rem;
+  padding: 4rem;
+  text-align: center;
+  border-radius: 6px;
+  box-shadow: 0 1.5rem 4rem rgba($dirtwhite, 0.2);
+  transition: transform 0.2s;
+  &--icon {
+    font-size: 6rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &:hover {
+    transform: translateY(-4px); //scale(1.04);
+  }
+
+  &-text {
+  }
+}
