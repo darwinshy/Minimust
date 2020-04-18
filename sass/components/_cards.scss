@@ -1,0 +1,76 @@
+.card {
+  perspective: 1500px;
+  -moz-perspective: 1500px;
+  position: relative;
+  height: 50rem;
+  display: flex;
+  &__side {
+    border-radius: 3px;
+    height: 50rem;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    backface-visibility: hidden;
+    box-shadow: 0 1.5rem 4rem $lightblack;
+    margin: auto 0;
+    &--front {
+      background-color: $dirtblack;
+    }
+    &--back {
+      background-color: $dirtblack;
+      transform: rotateY(180deg);
+      color: $dirtwhite;
+      text-align: center;
+      font-size: 5rem;
+      padding: 2rem;
+      font-family: "Century Gothic";
+      font-weight: 600;
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+
+  &-picture {
+    background-size: cover;
+    height: 100%;
+    transition: all 0.2s;
+    border-radius: 3px;
+    &--1 {
+      background-image: url(../img/cardsbackgrounds/1.jpg);
+      clip-path: polygon(0 0, 90% 0%, 100% 53%, 31% 100%);
+    }
+    &--2 {
+      background-image: url(../img/cardsbackgrounds/2.jpg);
+      clip-path: polygon(23% 0, 100% 13%, 100% 83%, 0 100%);
+    }
+    &--3 {
+      background-image: url(../img/cardsbackgrounds/3.jpg);
+      clip-path: polygon(0 0, 78% 0, 100% 54%, 26% 100%);
+    }
+    &:hover {
+      clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    }
+  }
+
+  &__heading {
+    color: $dirtwhite;
+    text-align: center;
+    font-size: 3rem;
+    background-color: rgba($color: $dirtblack, $alpha: 0.8);
+    display: inline-flexbox;
+    transform: translateY(-200px);
+  }
+  &__details {
+    color: $dirtwhite;
+    text-align: center;
+    font-size: 3em;
+    background-color: rgba($color: $dirtblack, $alpha: 0.8);
+    display: inline-flexbox;
+    transform: translateY(-200px);
+  }
+}

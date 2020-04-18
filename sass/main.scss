@@ -3,16 +3,22 @@
 @import "abstracts/functions";
 @import "abstracts/mixins";
 @import "abstracts/variable";
+
 @import "base/base";
 @import "base/animation";
+@import "base/utilities";
+
 @import "layouts/header";
 @import "layouts/grid";
-@import "pages/home";
 @import "base/typography";
+
+@import "pages/home";
+
+@import "components/story";
+@import "components/cards";
 @import "components/feature-box";
 @import "components/button";
 @import "components/composition";
-@import "base/utilities";
 
 // This styling is written in BEM and 7 to 1 Architecture.
 
