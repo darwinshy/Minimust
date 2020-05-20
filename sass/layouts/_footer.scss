@@ -1,0 +1,21 @@
+.footer {
+  margin-top: 30vh;
+  height: 30vh;
+  background-color: $dirtblack;
+  color: $dirtwhite;
+
+  &__logo-box {
+    text-align: center;
+  }
+  &__logo {
+    width: 15rem;
+  }
+  h1 {
+    padding: 2rem;
+    color: $dirtwhite;
+    font-size: 3em;
+    letter-spacing: 1rem;
+  }
+  &__navigation {
+  }
+}

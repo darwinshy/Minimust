@@ -1,27 +1,26 @@
 .section-about {
   background-color: $dirtwhite;
-  padding: 40rem 0;
-  margin-top: -35vh;
+  padding: 10rem 0;
+  height: 110vh;
 }
 
 .section-features {
   background-color: $dirtwhite;
-  padding: 40rem 0;
-  margin-top: -35vh;
-  height: 150vh;
+  padding: 20rem 0;
+  height: 100vh;
   background-image: url(../img/ZjUaXAt.png);
   background-size: cover;
   background-position: top;
-  clip-path: polygon(0 25%, 100% 0%, 100% 75%, 0% 100%);
+  // clip-path: polygon(0 25%, 100% 0%, 100% 75%, 0% 100%);
 }
 
 .section-cardflip {
-  padding: 25rem 0;
-  margin-top: -20vh;
+  padding: 10rem 0;
+  // margin-top: -20vh;
 }
 
 .section-people {
-  padding: 25rem 0;
-  margin-top: -20vh;
+  padding: 10rem 0;
+  height: 100vh;
   background-color: white;
 }

@@ -1,15 +1,15 @@
 .story {
   width: 75%;
   margin: 0 auto;
-  box-shadow: 0 3rem 6rem rgba($color: $dirtblack, $alpha: 0.1);
+  box-shadow: 6rem 3rem 6rem black;
   border-radius: 3px;
   background-color: $dirtwhite;
   padding: 5rem;
   padding-left: 9rem;
   clip-path: polygon(7% 0, 100% 0, 93% 100%, 0% 100%);
-  transition: all 0.2s  ;
-  &:not(:last-child){
-      margin-bottom: 10rem;
+  transition: all 0.2s;
+  &:not(:last-child) {
+    margin-bottom: 10rem;
   }
 
   &_shape {
@@ -17,16 +17,41 @@
     height: 15rem;
     float: left;
     shape-outside: circle(50% at 50% 50%);
-    background-color: #f15423;
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-2rem);
+    position: relative;
   }
 
   &_image {
+    transform: translate(-4rem);
+    transition: all 0.2s;
     height: 100%;
   }
 
-//   &:hover {
-//     clip-path: polygon(0 0, 93% 0, 100% 100%, 7% 100%);
-//   }
+  &_caption {
+    font-weight: 500;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    font-size: 1.7rem;
+    text-align: center;
+    color: white;
+    opacity: 0;
+    transition: all 0.2s;
+    backface-visibility: hidden;
+  }
+
+  &:hover &_caption {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+  &:hover &_image {
+    filter: blur(3px);
+    height: 110%;
+  }
+
+  //   &:hover {
+  //     clip-path: polygon(0 0, 93% 0, 100% 100%, 7% 100%);
+  //   }
 }
